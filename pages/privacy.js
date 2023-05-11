@@ -1,6 +1,12 @@
+import Head from "next/head";
 
 export default function Privacy() {
-    return (
-      <div><h1>Privacy</h1></div>
-    )
-  }
+  return (
+    <>
+    <Head>
+      <title>Privacy</title>
+    </Head>
+    <div><h1>Privacy</h1></div>
+    </>
+  )
+}

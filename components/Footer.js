@@ -14,11 +14,11 @@ export default function Footer() {
             </ul>
             <div>
                 <div className='social-media'>
-                    <a className="social-media__icon" id="instagram">Instagram</a>
-                    <a className="social-media__icon" id="linkedIn">LinkedIn</a>
+                    <Link href="#" className="social-media__icon" id="instagram">Instagram</Link>
+                    <Link href="#" className="social-media__icon" id="linkedIn">LinkedIn</Link>
                 </div>
                 <div className="return-container">
-                    <a className="return-container__link">Back to top</a>
+                    <Link href="#" className="return-container__link">Back to top</Link>
                     <div className="return-container__icon"></div>
                 </div>
                 <div className="horizontal-line"></div>
