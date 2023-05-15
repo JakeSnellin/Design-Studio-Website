@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <div className="footer">
+    <footer className="footer">
         <div className="footer__inner">
             <div className='logo'></div>
             <ul className='menu'>
@@ -30,6 +30,6 @@ export default function Footer() {
                 </ul>
             </div>
         </div>
-    </div>
+    </footer>
   )
 }

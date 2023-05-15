@@ -25,6 +25,7 @@ export const getStaticProps = async () => {
           projectImage {
             url
           }
+          featured
         }
       }
     }`,
@@ -49,6 +50,9 @@ export const getStaticProps = async () => {
   }
 }
 
+const checkFeatured = (project) => {
+  return project.featured === true;
+}
 
 export default function Home({projectData}) {
   return (
@@ -59,13 +63,11 @@ export default function Home({projectData}) {
     <div>
       <Hero />
     </div>
-      {projectData.data.projects[0].projectComponent.map(project =>(
+
+      {projectData.data.projects[0].projectComponent.filter(checkFeatured).map(project =>(
         <div key={project.id}><img src={`${project.projectImage.url}`} /></div>
       ))}
       <h1>Homepage</h1>
     </>
   )
 }
-
-//<Image src={`project.projectImage.url`} width={1200} height={675} />
-//{console.log(projectData.data.projects[0].projectComponent[0].projectImage.url)}
